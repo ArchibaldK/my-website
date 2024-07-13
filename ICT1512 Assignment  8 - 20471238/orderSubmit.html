@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Submission - TestStars</title>
+    <link rel="stylesheet" href="StyleSheet/styles.css">
+</head>
+<body>
+    <header>
+        <h1>TestStars</h1>
+        <img src="images/logo.png" alt="TestStars Logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="clientRegistrationForm.html">Registration</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Order Submission</h2>
+        <p>Thank you for your registration. Here are the details you submitted:</p>
+        <ul>
+            <li>Preferred Name: <span id="preferredNameDisplay"></span></li>
+            <li>Client Full Names as on ID: <span id="fullNameDisplay"></span></li>
+            <li>Surname: <span id="surnameDisplay"></span></li>
+            <li>ID Number: <span id="idNumberDisplay"></span></li>
+            <li>Telephone Work: <span id="telephoneWorkDisplay"></span></li>
+            <li>Cellphone Number: <span id="cellphoneNumberDisplay"></span></li>
+            <li>E-mail: <span id="emailDisplay"></span></li>
+            <li>Home Address: <span id="homeAddressDisplay"></span></li>
+            <li>Postal Address: <span id="postalAddressDisplay"></span></li>
+            <li>Referral Source: <span id="referralDisplay"></span></li>
+            <li>Credit Card Name: <span id="creditCardNameDisplay"></span></li>
+            <li>Credit Card Type: <span id="creditCardTypeDisplay"></span></li>
+            <li>Credit Card Number: <span id="creditCardNumberDisplay"></span></li>
+            <li>Expiration Month/Year: <span id="expiryDisplay"></span></li>
+            <li>CVC Number: <span id="cvcNumberDisplay"></span></li>
+        </ul>
+    </main>
+    <footer>
+        <p>Contact us: <a href="tel:+27612663968">📞 +27 61 266 3968</a> | <a href="mailto:galelatcn@gmail.com">✉️ galelatcn@gmail.com</a></p>
+        <p>&copy; 2024 TestStars</p>
+    </footer>
+    <script>
+        // Script to display submitted data from form
+        document.getElementById('preferredNameDisplay').innerText = localStorage.getItem('preferredName');
+        document.getElementById('fullNameDisplay').innerText = localStorage.getItem('fullName');
+        document.getElementById('surnameDisplay').innerText = localStorage.getItem('surname');
+        document.getElementById('idNumberDisplay').innerText = localStorage.getItem('idNumber');
+        document.getElementById('telephoneWorkDisplay').innerText = localStorage.getItem('telephoneWork');
+        document.getElementById('cellphoneNumberDisplay').innerText = localStorage.getItem('cellphoneNumber');
+        document.getElementById('emailDisplay').innerText = localStorage.getItem('email');
+        document.getElementById('homeAddressDisplay').innerText = localStorage.getItem('homeAddress');
+        document.getElementById('postalAddressDisplay').innerText = localStorage.getItem('postalAddress');
+        document.getElementById('referralDisplay').innerText = localStorage.getItem('referral');
+        document.getElementById('creditCardNameDisplay').innerText = localStorage.getItem('creditCardName');
+        document.getElementById('creditCardTypeDisplay').innerText = localStorage.getItem('creditCardType');
+        document.getElementById('creditCardNumberDisplay').innerText = localStorage.getItem('creditCardNumber');
+        document.getElementById('expiryDisplay').innerText = `${localStorage.getItem('expiryMonth')}/${localStorage.getItem('expiryYear')}`;
+        document.getElementById('cvcNumberDisplay').innerText = localStorage.getItem('cvcNumber');
+    </script>
+</body>
+</html>
